@@ -1,0 +1,25 @@
+{
+  "variants": {
+    "bites=0": {
+      "model": "eat_an_omelette:block/golden_spanish_potato_omelette"
+    },
+    "bites=1": {
+      "model": "eat_an_omelette:block/golden_spanish_potato_omelette_slice1"
+    },
+    "bites=2": {
+      "model": "eat_an_omelette:block/golden_spanish_potato_omelette_slice2"
+    },
+    "bites=3": {
+      "model": "eat_an_omelette:block/golden_spanish_potato_omelette_slice3"
+    },
+    "bites=4": {
+      "model": "eat_an_omelette:block/golden_spanish_potato_omelette_slice4"
+    },
+    "bites=5": {
+      "model": "eat_an_omelette:block/golden_spanish_potato_omelette_slice5"
+    },
+    "bites=6": {
+      "model": "eat_an_omelette:block/golden_spanish_potato_omelette_slice6"
+    }
+  }
+}

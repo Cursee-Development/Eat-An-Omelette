@@ -1,0 +1,22 @@
+{
+    "textures": {
+        "particle": "eat_an_omelette:block/spanish_potato_omelette_side",
+        "bottom": "eat_an_omelette:block/spanish_potato_omelette_bottom",
+        "top": "eat_an_omelette:block/spanish_potato_omelette_top",
+        "side": "eat_an_omelette:block/spanish_potato_omelette_side",
+        "inside": "eat_an_omelette:block/spanish_potato_omelette_inner"
+    },
+    "elements": [
+        {   "from": [ 7, 0, 1 ],
+            "to": [ 15, 8, 15 ],
+            "faces": {
+                "down":  { "texture": "#bottom", "cullface": "down" },
+                "up":    { "texture": "#top" },
+                "north": { "texture": "#side" },
+                "south": { "texture": "#side" },
+                "west":  { "texture": "#inside" },
+                "east":  { "texture": "#side" }
+            }
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#X"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:egg"
+    },
+    "X": {
+      "item": "minecraft:potato"
+    }
+  },
+  "result": {
+    "id": "eat_an_omelette:spanish_omelette_mix"
+  }
+}

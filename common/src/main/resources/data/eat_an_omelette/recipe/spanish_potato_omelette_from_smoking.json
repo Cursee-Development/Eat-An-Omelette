@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smoking",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "group": "eat_an_omelette",
+  "ingredient": {
+    "item": "eat_an_omelette:spanish_omelette_mix"
+  },
+  "id": "eat_an_omelette:spanish_potato_omelette"
+}

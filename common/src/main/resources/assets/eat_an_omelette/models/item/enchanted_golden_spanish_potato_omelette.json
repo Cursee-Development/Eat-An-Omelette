@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "eat_an_omelette:item/enchanted_golden_spanish_potato_omelette"
+  }
+}
