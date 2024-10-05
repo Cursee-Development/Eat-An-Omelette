@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "cookingtime": 400,
+  "experience": 0.35,
+  "group": "eat_an_omelette",
+  "ingredient": {
+    "item": "minecraft:egg"
+  },
+  "result": "eat_an_omelette:omelette"
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#X#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:gold_nugget"
+    },
+    "X": {
+      "item": "eat_an_omelette:omelette"
+    }
+  },
+  "result": {
+    "item": "eat_an_omelette:golden_omelette"
+  }
+}
