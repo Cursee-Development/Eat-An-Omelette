@@ -10,6 +10,7 @@ import net.minecraft.world.item.Items;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.AnvilUpdateEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import oshi.util.tuples.Triplet;
@@ -29,6 +30,7 @@ public class EatAnOmeletteForge {
     @Mod.EventBusSubscriber(modid = Constants.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
     public static class ForgeAnvilUpdateEvent {
 
+        @SubscribeEvent
         public static void onAnvilChange(AnvilUpdateEvent event) {
             if ((event.getRight().is(Items.ENCHANTED_BOOK) || event.getRight().getDescriptionId().contains("enchanted_book")) && (event.getRight().getTag() != null && (event.getRight().getTag().toString().contains("gf_enchantment") || event.getRight().getTag().toString().contains("golden_food")))) {
 
