@@ -60,33 +60,27 @@ public class SpanishPotatoOmeletteGoldenEnchantedBlock extends CakeBlock {
 
     public static InteractionResult eat(LevelAccessor level, BlockPos blockPos, BlockState blockState, Player player) {
 
-        if (!player.canEat(false)) {
-            return InteractionResult.PASS;
+        player.awardStat(Stats.EAT_CAKE_SLICE);
+        player.getFoodData().eat(2, 0.1F);
+
+        /* Custom Logic, effects copied from net.minecraft.world.food.Foods ENCHANTED_GOLDEN_APPLE */
+        player.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 400, 1));
+        player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 6000, 0));
+        player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 6000, 0));
+        player.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 2400, 3));
+
+        int bitesTaken = blockState.getValue(BITES);
+
+        level.gameEvent(player, GameEvent.EAT, blockPos);
+
+        if (bitesTaken < 6) {
+            level.setBlock(blockPos, blockState.setValue(BITES, bitesTaken + 1), 3);
         }
         else {
-
-            player.awardStat(Stats.EAT_CAKE_SLICE);
-            player.getFoodData().eat(2, 0.1F);
-
-            /* Custom Logic, effects copied from net.minecraft.world.food.Foods ENCHANTED_GOLDEN_APPLE */
-            player.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 400, 1));
-            player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 6000, 0));
-            player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 6000, 0));
-            player.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 2400, 3));
-
-            int bitesTaken = blockState.getValue(BITES);
-
-            level.gameEvent(player, GameEvent.EAT, blockPos);
-
-            if (bitesTaken < 6) {
-                level.setBlock(blockPos, blockState.setValue(BITES, bitesTaken + 1), 3);
-            }
-            else {
-                level.removeBlock(blockPos, false);
-                level.gameEvent(player, GameEvent.BLOCK_DESTROY, blockPos);
-            }
-
-            return InteractionResult.SUCCESS;
+            level.removeBlock(blockPos, false);
+            level.gameEvent(player, GameEvent.BLOCK_DESTROY, blockPos);
         }
+
+        return InteractionResult.SUCCESS;
     }
 }
