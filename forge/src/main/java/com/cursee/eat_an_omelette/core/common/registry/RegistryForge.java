@@ -48,13 +48,13 @@ public class RegistryForge {
 
     public static <T extends Block> RegistryObject<T> registerBlockWithRareBlockItem(String id, Supplier<T> supplier) {
         RegistryObject<T> registeredBlock = registerBlock(id, supplier);
-        registerItem(id, () -> new BlockItem(registeredBlock.get(), new Item.Properties().rarity(Rarity.RARE).stacksTo(1)));
+        registerItem(id, () -> new BlockItem(registeredBlock.get(), new Item.Properties().rarity(Rarity.RARE)));
         return registeredBlock;
     }
 
     public static <T extends Block> RegistryObject<T> registerBlockWithEpicBlockItem(String id, Supplier<T> supplier) {
         RegistryObject<T> registeredBlock = registerBlock(id, supplier);
-        registerItem(id, () -> new BlockItem(registeredBlock.get(), new Item.Properties().rarity(Rarity.EPIC).stacksTo(1).component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)));
+        registerItem(id, () -> new BlockItem(registeredBlock.get(), new Item.Properties().rarity(Rarity.EPIC).component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)));
         return registeredBlock;
     }
 
