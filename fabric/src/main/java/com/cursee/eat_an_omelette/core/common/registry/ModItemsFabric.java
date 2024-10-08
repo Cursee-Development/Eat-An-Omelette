@@ -13,10 +13,10 @@ public class ModItemsFabric {
             new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(4).saturationMod(4f).build())));
 
     public static final Item GOLDEN_OMELETTE = RegistryFabric.registerItem("golden_omelette", () ->
-            new Item(new Item.Properties().rarity(Rarity.RARE).stacksTo(1).food(new FoodProperties.Builder().nutrition(8).saturationMod(8f).build())));
+            new Item(new Item.Properties().rarity(Rarity.RARE).stacksTo(1).food(new FoodProperties.Builder().nutrition(8).saturationMod(8f).alwaysEat().build())));
 
     public static final Item ENCHANTED_GOLDEN_OMELETTE = RegistryFabric.registerItem("enchanted_golden_omelette", () ->
-            new SimpleFoiledItem(new Item.Properties().rarity(Rarity.EPIC).stacksTo(1).food(new FoodProperties.Builder().nutrition(8).saturationMod(8f).build())));
+            new SimpleFoiledItem(new Item.Properties().rarity(Rarity.EPIC).stacksTo(1).food(new FoodProperties.Builder().nutrition(8).saturationMod(8f).alwaysEat().build())));
 
     public static final Item SPANISH_OMELETTE_MIX = RegistryFabric.registerItem("spanish_omelette_mix", () ->
             new Item(new Item.Properties()));

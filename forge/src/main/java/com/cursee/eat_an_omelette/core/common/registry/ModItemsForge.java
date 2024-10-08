@@ -14,10 +14,10 @@ public class ModItemsForge {
             new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(4).saturationMod(4f).build())));
 
     public static final RegistryObject<Item> GOLDEN_OMELETTE = RegistryForge.registerItem("golden_omelette", () ->
-            new Item(new Item.Properties().rarity(Rarity.RARE).stacksTo(1).food(new FoodProperties.Builder().nutrition(8).saturationMod(8f).build())));
+            new Item(new Item.Properties().rarity(Rarity.RARE).stacksTo(1).food(new FoodProperties.Builder().nutrition(8).saturationMod(8f).alwaysEat().build())));
 
     public static final RegistryObject<Item> ENCHANTED_GOLDEN_OMELETTE = RegistryForge.registerItem("enchanted_golden_omelette", () ->
-            new SimpleFoiledItem(new Item.Properties().rarity(Rarity.EPIC).stacksTo(1).food(new FoodProperties.Builder().nutrition(8).saturationMod(8f).build())));
+            new SimpleFoiledItem(new Item.Properties().rarity(Rarity.EPIC).stacksTo(1).food(new FoodProperties.Builder().nutrition(8).saturationMod(8f).alwaysEat().build())));
 
     public static final RegistryObject<Item> SPANISH_OMELETTE_MIX = RegistryForge.registerItem("spanish_omelette_mix", () ->
             new Item(new Item.Properties()));
